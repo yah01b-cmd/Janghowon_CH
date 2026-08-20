@@ -39,31 +39,42 @@
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Church Logo -->
-                <a href="#" class="flex flex-col items-start group">
-                    <span class="text-[10px] sm:text-xs tracking-widest text-gray-400 uppercase font-semibold">JANGHOWON HOLINESS CHURCH</span>
-                    <span class="text-2xl font-black text-church-main tracking-tight group-hover:text-church-light transition-colors">장호원성결교회</span>
+                <!-- Church Logo with Official KEHC Emblem -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <!-- Header Small Symbol -->
+                    <svg class="w-10 h-10 flex-shrink-0 group-hover:scale-105 transition-transform" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="95" fill="#F4F9F5" stroke="#1A4D2E" stroke-width="6"/>
+                        <circle cx="100" cy="100" r="86" stroke="#00B6EE" stroke-width="4" stroke-dasharray="8 4" fill="none"/>
+                        <path d="M100 22 C114 45 120 68 100 90 C80 68 86 45 100 22 Z" fill="#4F6F52"/>
+                        <path d="M100 178 C114 155 120 132 100 110 C80 132 86 155 100 178 Z" fill="#4F6F52"/>
+                        <path d="M22 100 C45 86 68 80 90 100 C68 120 45 114 22 100 Z" fill="#4F6F52"/>
+                        <path d="M178 100 C155 86 132 80 110 100 C132 120 155 114 178 100 Z" fill="#4F6F52"/>
+                        <circle cx="100" cy="100" r="48" stroke="#5C1220" stroke-width="4" stroke-dasharray="6 4" fill="none"/>
+                        <path d="M92 52 H108 V92 H148 V108 H108 V148 H92 V108 H52 V92 H92 Z" fill="#1A4D2E"/>
+                    </svg>
+                    
+                    <div class="flex flex-col items-start">
+                        <span class="text-[10px] sm:text-xs tracking-widest text-gray-400 uppercase font-semibold">JANGHOWON HOLINESS CHURCH</span>
+                        <span class="text-2xl font-black text-church-main tracking-tight group-hover:text-church-light transition-colors">장호원성결교회</span>
+                    </div>
                 </a>
 
                 <!-- Desktop Navigation Menu -->
                 <nav class="hidden md:flex space-x-8 items-center text-base font-bold">
-                    <!-- 교회소개 -->
                     <div class="relative group py-6">
                         <a href="#" class="text-gray-700 hover:text-church-main transition-colors flex items-center gap-1">교회소개</a>
                         <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-b-lg border-t-2 border-church-main py-2 z-50 transition-all">
-                            <a href="#" class="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-church-main">인사말</a>
+                            <a href="#greeting-section" class="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-church-main">인사말</a>
                             <a href="#" class="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-church-main">섬기는 사람들</a>
                             <a href="#" class="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-church-main">예배안내</a>
                             <a href="#" class="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-emerald-50 hover:text-church-main">오시는길</a>
                         </div>
                     </div>
 
-                    <!-- 예배설교 -->
                     <div class="relative group py-6">
                         <a href="#" class="text-gray-700 hover:text-church-main transition-colors">예배설교</a>
                     </div>
 
-                    <!-- 교회사역 -->
                     <div class="relative group py-6">
                         <a href="#" class="text-gray-700 hover:text-church-main transition-colors">교회사역</a>
                         <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-b-lg border-t-2 border-church-main py-2 z-50">
@@ -74,7 +85,6 @@
                         </div>
                     </div>
 
-                    <!-- 교회소식 -->
                     <div class="relative group py-6">
                         <a href="#" class="text-gray-700 hover:text-church-main transition-colors">교회소식</a>
                         <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-b-lg border-t-2 border-church-main py-2 z-50">
@@ -93,7 +103,6 @@
                         <span>|</span>
                         <a href="#" class="hover:text-church-main">회원가입</a>
                     </div>
-                    <!-- Hamburger Button (Mobile & Sitemap Drawer Trigger) -->
                     <button id="hamburger-btn" aria-label="메뉴 열기" class="text-gray-700 hover:text-church-main p-2 rounded-lg hover:bg-gray-100 transition-colors">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
@@ -102,11 +111,10 @@
         </div>
     </header>
 
-    <!-- 2. Slide Drawer / Sitemap (Mobile & PC overlay) -->
+    <!-- 2. Slide Drawer / Sitemap -->
     <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-50 hidden transition-opacity opacity-0"></div>
     <div id="drawer-content" class="fixed right-0 top-0 bottom-0 w-80 max-w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto">
         <div>
-            <!-- Drawer Header -->
             <div class="flex justify-between items-center p-6 border-b border-gray-100 bg-emerald-900 text-white">
                 <div class="flex flex-col">
                     <span class="text-[10px] text-emerald-200 font-semibold tracking-widest uppercase">JANGHOWON HOLINESS CHURCH</span>
@@ -117,22 +125,18 @@
                 </button>
             </div>
 
-            <!-- Drawer Links -->
             <div class="p-6 space-y-6">
-                <!-- 교회소개 -->
                 <div>
                     <h3 class="font-bold text-church-main text-base mb-2 pb-1 border-b border-emerald-100 flex items-center gap-2">
                         <i class="fa-solid fa-church text-church-light text-xs"></i> 교회소개
                     </h3>
                     <ul class="space-y-2 text-sm pl-4 text-gray-600 font-medium">
-                        <li><a href="#" class="hover:text-church-main transition-colors">인사말</a></li>
+                        <li><a href="#greeting-section" class="hover:text-church-main transition-colors">인사말</a></li>
                         <li><a href="#" class="hover:text-church-main transition-colors">섬기는 사람들</a></li>
                         <li><a href="#" class="hover:text-church-main transition-colors">예배안내</a></li>
                         <li><a href="#" class="hover:text-church-main transition-colors">오시는길</a></li>
                     </ul>
                 </div>
-
-                <!-- 예배설교 -->
                 <div>
                     <h3 class="font-bold text-church-main text-base mb-2 pb-1 border-b border-emerald-100 flex items-center gap-2">
                         <i class="fa-solid fa-book-bible text-church-light text-xs"></i> 예배설교
@@ -142,8 +146,6 @@
                         <li><a href="#" class="hover:text-church-main transition-colors">특별예배 / 찬양</a></li>
                     </ul>
                 </div>
-
-                <!-- 교회사역 -->
                 <div>
                     <h3 class="font-bold text-church-main text-base mb-2 pb-1 border-b border-emerald-100 flex items-center gap-2">
                         <i class="fa-solid fa-hands-holding-child text-church-light text-xs"></i> 교회사역
@@ -155,8 +157,6 @@
                         <li><a href="#" class="hover:text-church-main transition-colors">전도및선교</a></li>
                     </ul>
                 </div>
-
-                <!-- 교회소식 -->
                 <div>
                     <h3 class="font-bold text-church-main text-base mb-2 pb-1 border-b border-emerald-100 flex items-center gap-2">
                         <i class="fa-solid fa-bullhorn text-church-light text-xs"></i> 교회소식
@@ -171,7 +171,6 @@
             </div>
         </div>
 
-        <!-- Drawer Footer -->
         <div class="p-6 bg-gray-50 border-t border-gray-100 text-xs text-gray-500">
             <p class="font-bold text-gray-800 text-sm">장호원성결교회</p>
             <p class="mt-1">경기도 이천시 장호원읍 샘재로 133-7</p>
@@ -187,7 +186,6 @@
         <!-- 3. Main Visual Banner (2026 Slogan Card) -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="relative rounded-[2.5rem] overflow-hidden shadow-xl bg-gradient-to-r from-sky-200 via-sky-100 to-blue-200 p-8 md:p-14 text-center min-h-[320px] md:min-h-[400px] flex items-center justify-center border border-white">
-                <!-- Background decorative overlay -->
                 <div class="absolute inset-0 bg-white/20 backdrop-blur-[1px]"></div>
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-blue-900/10"></div>
 
@@ -207,11 +205,10 @@
                     </p>
 
                     <p class="text-base sm:text-lg md:text-xl font-bold text-teal-800 pt-2 text-right max-w-2xl mx-auto">
-                        사도행전 1:8절
+                        (사도행전 1:8)
                     </p>
                 </div>
 
-                <!-- Slide Nav Buttons -->
                 <button aria-label="이전 슬라이드" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/60 hover:bg-white text-blue-950 flex items-center justify-center shadow-md transition-all">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
@@ -228,7 +225,6 @@
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1: 주일예배 -->
                 <div class="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-sm bg-white border border-gray-100 flex items-center p-6 group hover:shadow-lg transition-all">
                     <div class="z-10 flex-1">
                         <span class="text-2xl font-black text-church-main block">주일예배</span>
@@ -239,7 +235,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2: 수요예배 -->
                 <div class="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-sm bg-gray-900 text-white flex items-end p-6 group">
                     <div class="absolute inset-0 bg-cover bg-center opacity-50 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1507692049790-de58290a4334?q=80&w=600&auto=format&fit=crop');"></div>
                     <div class="relative z-10">
@@ -248,7 +243,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3: 특별예배 -->
                 <div class="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-sm bg-gray-900 text-white flex items-end p-6 group">
                     <div class="absolute inset-0 bg-cover bg-center opacity-50 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop');"></div>
                     <div class="relative z-10">
@@ -259,22 +253,103 @@
             </div>
         </section>
 
-        <!-- 5. Section: Welcome & Church Visions -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 class="text-center text-2xl md:text-3xl font-black text-church-main mb-12 tracking-tight">
-                장호원성결교회에 오신 것을 환영합니다!
-            </h2>
+        <!-- 5. Section: Pastor Greeting Card (Custom Layout as Requested) -->
+        <section id="greeting-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex justify-between items-center mb-6 border-b pb-3 border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-black text-church-main tracking-tight">
+                    인사말
+                </h2>
+                <div class="text-xs text-gray-400 font-medium">
+                    처음으로 &gt; 교회소개 &gt; <span class="text-gray-700 font-bold">인사말</span>
+                </div>
+            </div>
 
-            <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
-                <!-- Left Circular Graphic -->
-                <div class="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0 flex items-center justify-center">
-                    <div class="absolute inset-0 rounded-full border-8 border-transparent border-t-church-light border-r-church-main rotate-45"></div>
-                    <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-white shadow-xl flex items-center justify-center border-4 border-emerald-50">
-                        <i class="fa-solid fa-church text-7xl text-church-main"></i>
+            <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-lg border border-gray-100 grid grid-cols-1 md:grid-cols-12 gap-0">
+                <!-- Left: Pastor Portrait Photo -->
+                <div class="md:col-span-4 bg-gray-200 min-h-[350px] relative flex items-center justify-center overflow-hidden">
+                    <img src="pastor.jpg" alt="담임목사" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop';">
+                    <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded text-xs">
+                        담임목사
                     </div>
                 </div>
 
-                <!-- Right Info List -->
+                <!-- Center: Message Box (Deep Blue-Green Theme) -->
+                <div class="md:col-span-5 bg-teal-800 text-white p-8 md:p-10 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold leading-tight border-b border-teal-600 pb-4">
+                            장호원성결교회 방문을<br>진심으로 환영합니다.
+                        </h3>
+                        
+                        <p class="text-sm sm:text-base leading-relaxed text-teal-50 font-normal">
+                            장호원 교회는 생명의 공동체로서 성도들이 양육과 제자훈련을 통하여 예수 사람 예수 일꾼으로 세우며, 그들이 하나님의 백성으로서 삶의 자리에서 그리스도를 증언하며 하나님과 하나님 백성 공동체 안으로 들어와 코이노니아의 삶을 살도록 믿지 않는 이들을 초대하며, 양육자가 되어 이들을 섬기도록 합니다.
+                        </p>
+
+                        <p class="text-sm sm:text-base font-semibold text-emerald-200 bg-teal-900/60 p-3 rounded-xl border border-teal-700/50">
+                            "그래서 가르치고 · 전파하고 · 치유하고 · 제자 삼는 교회를 지향합니다."
+                        </p>
+                    </div>
+
+                    <div class="pt-8 text-right border-t border-teal-700/50 mt-6">
+                        <span class="text-xs text-teal-200 block">장호원성결교회</span>
+                        <span class="text-lg font-bold text-white">담임목사</span>
+                    </div>
+                </div>
+
+                <!-- Right: Profile / Education -->
+                <div class="md:col-span-3 bg-white p-8 flex flex-col justify-center border-l border-gray-100">
+                    <h4 class="font-extrabold text-church-main text-base mb-4 pb-2 border-b-2 border-church-light flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-church-light"></i> 학력 및 경력
+                    </h4>
+                    <ul class="space-y-3 text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <span>서울신학대학교 신학과 졸업</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <span>서울신학대학교신학대학원 졸업(M. Div.)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <span>실천신학대학원(Th.M.)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <span>호서대학교 신학전문대학원 구약학 박사과정 수료</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Section: Welcome & Church Visions with Official KEHC Emblem -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
+            <h2 class="text-center text-2xl md:text-3xl font-black text-church-main mb-12 tracking-tight">
+                장호원성결교회의 비전
+            </h2>
+
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0 flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full border-8 border-transparent border-t-church-light border-r-church-main rotate-45"></div>
+                    <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-white shadow-xl flex items-center justify-center border-4 border-emerald-50 p-6">
+                        <svg class="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="94" fill="#F8FCF9" stroke="#1A4D2E" stroke-width="5"/>
+                            <circle cx="100" cy="100" r="86" stroke="#00B6EE" stroke-width="3" stroke-dasharray="6 3" fill="none"/>
+                            
+                            <g fill="#4F6F52">
+                                <path d="M100 20 C115 45 122 70 100 92 C78 70 85 45 100 20 Z"/>
+                                <path d="M100 180 C115 155 122 130 100 108 C78 130 85 155 100 180 Z"/>
+                                <path d="M20 100 C45 85 70 78 92 100 C70 122 45 115 20 100 Z"/>
+                                <path d="M180 100 C155 85 130 78 108 100 C130 122 155 115 180 100 Z"/>
+                            </g>
+
+                            <circle cx="100" cy="100" r="48" stroke="#5C1220" stroke-width="4" stroke-dasharray="6 4" fill="none"/>
+                            <path d="M92 50 H108 V92 H150 V108 H108 V150 H92 V108 H50 V92 H92 Z" fill="#1A4D2E"/>
+                            <text x="100" y="172" text-anchor="middle" fill="#1A4D2E" font-size="11" font-weight="800" font-family="'Noto Sans KR', sans-serif" letter-spacing="1">기독교대한성결교회</text>
+                        </svg>
+                    </div>
+                </div>
+
                 <div class="space-y-6 max-w-xl">
                     <div>
                         <h3 class="text-lg font-bold text-church-main mb-1 border-l-4 border-church-light pl-3">
@@ -315,24 +390,21 @@
             </div>
         </section>
 
-        <!-- 6. Quick Circular 3-Buttons Banner -->
+        <!-- 7. Quick Circular 3-Buttons Banner -->
         <section class="bg-church-main py-12 my-8 text-white">
             <div class="max-w-5xl mx-auto px-4 grid grid-cols-3 gap-4 md:gap-8 text-center">
-                <!-- Button 1 -->
                 <a href="#" class="bg-white rounded-full p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col items-center justify-center aspect-square group">
                     <i class="fa-solid fa-book-open text-3xl md:text-4xl text-church-main mb-2 group-hover:scale-110 transition-transform"></i>
                     <span class="font-black text-church-main text-xs sm:text-base md:text-lg">금주의 주보</span>
                     <span class="text-[10px] md:text-xs text-gray-400 hidden sm:inline font-medium">Weekly News</span>
                 </a>
 
-                <!-- Button 2 -->
                 <a href="#" class="bg-emerald-800 rounded-full p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col items-center justify-center aspect-square text-white border border-emerald-600 group">
                     <i class="fa-solid fa-clock text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform"></i>
                     <span class="font-black text-xs sm:text-base md:text-lg">예배시간 안내</span>
                     <span class="text-[10px] md:text-xs text-emerald-200 hidden sm:inline font-medium">Sermon Schedule</span>
                 </a>
 
-                <!-- Button 3 -->
                 <a href="#" class="bg-white rounded-full p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col items-center justify-center aspect-square group">
                     <i class="fa-brands fa-youtube text-3xl md:text-4xl text-red-600 mb-2 group-hover:scale-110 transition-transform"></i>
                     <span class="font-black text-church-main text-xs sm:text-base md:text-lg">유튜브 바로가기</span>
@@ -341,14 +413,11 @@
             </div>
         </section>
 
-        <!-- 7. News & Gallery Card Box -->
+        <!-- 8. News & Gallery Card Box -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="bg-white rounded-3xl p-6 md:p-10 shadow-lg border border-gray-100">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    
-                    <!-- Left Column: 새소식 & 포토앨범 -->
                     <div class="space-y-10">
-                        <!-- 새소식 목록 -->
                         <div>
                             <div class="flex justify-between items-center pb-3 border-b border-gray-200 mb-4">
                                 <h3 class="text-xl font-extrabold text-church-main">장호원성결교회 <span class="text-church-light">새소식</span></h3>
@@ -374,7 +443,6 @@
                             </ul>
                         </div>
 
-                        <!-- 포토앨범 -->
                         <div>
                             <div class="flex justify-between items-center pb-3 border-b border-gray-200 mb-4">
                                 <h3 class="text-xl font-extrabold text-church-main">장호원성결교회 <span class="text-church-light">포토앨범</span></h3>
@@ -394,9 +462,7 @@
                         </div>
                     </div>
 
-                    <!-- Right Column: Banner Image & Oval Links -->
                     <div class="space-y-6 flex flex-col justify-between">
-                        <!-- Image Banner Slider Frame -->
                         <div class="rounded-2xl overflow-hidden shadow-md h-52 sm:h-60 relative bg-gray-800">
                             <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=800&auto=format&fit=crop" alt="Church Banner" class="w-full h-full object-cover">
                             <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
@@ -405,9 +471,8 @@
                             </div>
                         </div>
 
-                        <!-- Right Quick Oval Buttons -->
                         <div class="space-y-3">
-                            <a href="#" class="flex items-center justify-between px-6 py-3 bg-gray-50 hover:bg-emerald-50 rounded-full border border-gray-200 transition-colors group">
+                            <a href="#greeting-section" class="flex items-center justify-between px-6 py-3 bg-gray-50 hover:bg-emerald-50 rounded-full border border-gray-200 transition-colors group">
                                 <span class="text-sm font-bold text-gray-700 group-hover:text-church-main">담임목사님을 소개합니다</span>
                                 <span class="px-4 py-1 bg-church-light text-white text-xs font-extrabold rounded-full uppercase">PASTOR</span>
                             </a>
@@ -428,15 +493,13 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- 8. Location & Info Summary Row -->
+        <!-- 9. Location & Info Summary Row -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-200 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <!-- Item 1 -->
                 <div class="flex flex-col items-center space-y-2">
                     <div class="w-12 h-12 rounded-full border-2 border-church-light flex items-center justify-center text-church-light text-xl">
                         <i class="fa-solid fa-location-dot"></i>
@@ -445,7 +508,6 @@
                     <p class="text-xs text-gray-600 font-medium">경기도 이천시 장호원읍 샘재로 133-7</p>
                 </div>
 
-                <!-- Item 2 -->
                 <div class="flex flex-col items-center space-y-2 md:border-x md:border-gray-200">
                     <div class="w-12 h-12 rounded-full border-2 border-church-light flex items-center justify-center text-church-light text-xl">
                         <i class="fa-solid fa-phone"></i>
@@ -454,7 +516,6 @@
                     <p class="text-xs text-gray-600 font-medium">TEL : 031)641-3960</p>
                 </div>
 
-                <!-- Item 3 -->
                 <div class="flex flex-col items-center space-y-2">
                     <div class="w-12 h-12 rounded-full border-2 border-church-light flex items-center justify-center text-church-light text-xl">
                         <i class="fa-solid fa-heart"></i>
@@ -470,10 +531,9 @@
         </section>
     </main>
 
-    <!-- 9. Footer -->
+    <!-- 10. Footer -->
     <footer class="bg-church-footer text-gray-300 py-10 mt-12 border-t border-emerald-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <!-- Left Info -->
             <div class="space-y-2">
                 <h2 class="text-2xl font-black text-white tracking-tight">장호원성결교회</h2>
                 <p class="text-xs text-gray-400 leading-relaxed font-medium">
@@ -485,7 +545,6 @@
                 </p>
             </div>
 
-            <!-- Right Links -->
             <div class="flex flex-col md:items-end space-y-2 text-xs text-gray-400">
                 <div class="flex space-x-4">
                     <a href="#" class="hover:text-white transition-colors">사이트맵</a>
